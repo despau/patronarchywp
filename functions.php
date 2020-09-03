@@ -39,6 +39,38 @@ register_nav_menus([
 ]);
 
 
+// Setup Widget Areas
+function patronarchy_widgets_init() {
+    register_sidebar([
+      'name'          => esc_html__( 'Main Sidebar', 'patronarchy' ),
+      'id'            => 'main-sidebar',
+      'description'   => esc_html__( 'Add widgets for main sidebar here', 'patronarchy' ),
+      'before_widget' => '<section class="widget">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    ]);
+    register_sidebar([
+      'name'          => esc_html__( 'Page Sidebar', 'patronarchy' ),
+      'id'            => 'page-sidebar',
+      'description'   => esc_html__( 'Add widgets for page sidebar here', 'patronarchy' ),
+      'before_widget' => '<section class="widget">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    ]);
+    register_sidebar([
+      'name'          => esc_html__( 'Front Page Widgets', 'patronarchy' ),
+      'id'            => 'front-page',
+      'description'   => esc_html__( 'Add widgets for the front page here', 'patronarchy' ),
+      'before_widget' => '<section class="widget">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h2 class="widget-title">',
+      'after_title'   => '</h2>',
+    ]);
+  }
+  add_action( 'widgets_init', 'patronarchy_widgets_init' );
+
 
 
 
