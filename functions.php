@@ -6,7 +6,18 @@ add_theme_support( 'post-thumbnais' );
 add_theme_support( 'post-format', ['aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'video', 'chat' ] );
 add_theme_support( 'title-tag' );
 add_theme_support( 'title-tag' );
-add_theme_support( 'html-5' );
+add_theme_support(
+    'html5',
+    array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'script',
+        'style',
+    )
+);
 add_theme_support( 'automatic-feedlink' );
 add_theme_support( 'custom-header' );
 add_theme_support( 'custom-logo' );
@@ -19,19 +30,13 @@ add_theme_support( 'starter-content' );
 function patronarchy_enqueue_styles() {
     wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time(), 'all' );
 }
-add_action( 'wp_enqueue_scripts', 'patronarchy_enqueue_styles' )
+add_action( 'wp_enqueue_scripts', 'patronarchy_enqueue_styles' );
 
 
-
-
-
-
-
-
-
-
-
-
+//Register Menu Locations
+register_nav_menus([
+    'main-menu' => esc_html__( 'Main Menu', 'pratonarchy' )
+]);
 
 
 
