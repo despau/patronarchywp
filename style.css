@@ -220,12 +220,12 @@ article.post {
   float: right;
 }
 
-.home #secondary {
+.myhome #secondary {
   width: 100%;
   clear: both;
 }
 
-.home #secondary .widget {
+.myhome #secondary .widget {
   width: 30%;
   float: left;
 }

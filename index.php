@@ -2,27 +2,24 @@
 
     <div id="primary" class="content-area">
 
-        <div id="main" class="site-main" role="navigation">
-
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <main id="main" class="site-main" role="navigation">
+            <?php if (have_posts() ) : while (have_posts() ) : the_post();
                 
-                <header class="entry-header">
-                    <h1>entry header</h1>
-                </header>
+                get_template_part( 'template-parts/content' );
+             
+             endwhile;  else : ?>          
                 
-                <div class="entry-content">
-                    <p>entry desc</p>
-                </div>
+                <?php get_template_part( 'template-parts/content', 'none' );
+            
+            endif; ?>
 
-            </article>
+        </main><!-- #main -->
 
-        </div><!-- #main -->
-
-        <h5>Index.php</h5>
+        <h5>template: Index.php</h5>
     </div><!-- #primary -->
-
-    <div class="site-secondary" id="secondary">
-        <?php get_sidebar(); ?>
-    </div> <!-- #primary -->
-
+    
+    <?php get_sidebar(); ?>
+    
+     
+   
 <?php get_footer(); ?>    
