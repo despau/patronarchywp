@@ -13,9 +13,11 @@
             
             endif; ?>
 
+            <?php echo paginate_links(); ?>
+
         </main><!-- #main -->
 
-        <h5>template: Index.php (for posts pages / posts)</h5>
+        <h5>template: Home.php (for homepage (blog page))</h5>
     </div><!-- #primary -->
     
     <!-- secondary -->
