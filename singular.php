@@ -5,7 +5,7 @@
         <main id="main" class="site-main" role="navigation">
             <?php if (have_posts() ) : while (have_posts() ) : the_post();
                 
-                get_template_part( 'template-parts/content' );
+                get_template_part( 'template-parts/content', 'page' );
              
              endwhile;  else : ?>          
                 
@@ -15,7 +15,7 @@
 
         </main><!-- #main -->
 
-        <h5>template: Index.php (for posts pages / posts)</h5>
+        <h5>template: Singular.php (static pages)[content-page]</h5>
     </div><!-- #primary -->
     
     <!-- secondary -->

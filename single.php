@@ -15,7 +15,7 @@
 
         </main><!-- #main -->
 
-        <h5>template: Index.php (for posts pages / posts)</h5>
+        <h5>template: Single.php (blog posts)[content]</h5>
     </div><!-- #primary -->
     
     <!-- secondary -->
