@@ -25,6 +25,10 @@ body.category-9 {
   background-color: #a7ff91;
 }
 
+body.category-2 {
+  background-color: #f1f1f1;
+}
+
 body.postid-1301 {
   background-color: #AB8BED;
 }
@@ -221,14 +225,18 @@ article.post {
   float: right;
 }
 
-.myhome #secondary {
+.home #secondary {
   width: 100%;
   clear: both;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.myhome #secondary .widget {
-  width: 30%;
-  float: left;
+.home #secondary .widget {
+  /* width: 22%;
+  float: left; */
+  flex-basis: 220px;
 }
 
 #secondary h2 {

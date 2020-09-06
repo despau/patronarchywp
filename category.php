@@ -1,18 +1,12 @@
 <?php get_header(); ?>
-    <!-- can also add author-id.php author-nicename.php etc.. -->
+
     <div id="primary" class="content-area">
 
         <main id="main" class="site-main" role="navigation">
 
-            <div class="author-bio">
-                <h1><?php the_archive_title(); ?></h1>
-                <p>
-                    <?php echo the_author_meta( 'description', $post->post_autor ); ?>
-                </p>
-            </div>
-
-            
-            <!-- <p><?php the_archive_description(); ?></p> -->
+            <h1><?php the_archive_title(); ?></h1>
+            <p><?php echo category_description(); ?></p>
+            <hr>
 
             <?php if (have_posts() ) : while (have_posts() ) : the_post();
                 
@@ -28,7 +22,7 @@
 
         </main><!-- #main -->
 
-        <h5>template: Author.php</h5>
+        <h5>template: Category.php</h5>
     </div><!-- #primary -->
     
     <!-- secondary -->
