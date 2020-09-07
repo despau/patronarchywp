@@ -33,6 +33,11 @@ body.postid-1301 {
   background-color: #AB8BED;
 }
 
+body.postid-1472{
+  /* style for single-portfolio-php-for-wordpress page  */
+  background-color: #b9cc35;
+}
+
 h1, h2, h3, h4, h5, h6,
 .site-title {
   font-family: "Varela Round", sans-serif;

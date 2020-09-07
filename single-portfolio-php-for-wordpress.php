@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area extended">
+    <div id="primary" class="content-area extented">
 
         <main id="main" class="site-main" role="navigation">
             <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
@@ -22,11 +22,6 @@
                         <?php the_content( '<p>', '</p>' ); ?>
 
                         <p>
-                            <?php esc_html_e( 'Skills' ) ?>:
-                            <?php the_terms( $post->ID, 'skills'); ?>
-                        </p>
-
-                        <p>
                             <a class='button' href="<?php the_field( 'url' ); ?>">
                                 <?php esc_html_e( 'Visit the Site', 'patronarchy'); ?>
                             </a>
@@ -42,7 +37,7 @@
 
         </main><!-- #main -->
 
-        <h5>template: Single-Portfolio.php</h5>
+        <h5>template: Single-Portfolio-php-for-wordpress.php</h5>
     </div><!-- #primary -->
      
    
